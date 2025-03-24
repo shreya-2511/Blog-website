@@ -1,0 +1,14 @@
+.body{
+  margin: 0;
+  padding: 0;
+}
+
+.form-control{
+  
+}
+
+nav{
+  display: flex;
+  flex-direction: row;
+  background-color: aquamarine;
+}

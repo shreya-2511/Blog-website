@@ -1,0 +1,14 @@
+<%- include('header.ejs') %>
+
+<h1>Edit Post Content</h1>
+<form method="POST" action="/post/<%= post.id %>?_method=PATCH">
+    <label for="postTitle">Title:</label>
+    <textarea id="postTitle" name="postTitle" required><%= post.title %></textarea>
+    
+    <label for="postContent">Content:</label>
+    <textarea id="postContent" name="postBody" required><%= post.content %></textarea>
+    <button type="submit">Update Content</button>
+</form>
+<a href="/">Back to Home</a>
+
+<%- include('footer.ejs') %>

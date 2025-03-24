@@ -1,0 +1,19 @@
+<%- include('header.ejs') %>
+
+<a href="/compose">Create a New Post</a>
+<a href="/home">Home</a>
+<div class="posts">
+    <% posts.forEach((post, index) => { %>
+        <div class="post">            
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title"><a href="/post/<%= post.id %>"><%= post.title %></h5>
+                  <p class="card-text"><%= post.content.substring(0, 100) %>...</p>
+                </div>
+            </div>
+           </div>
+        </div>
+    <% }) %>
+
+
+<%- include('footer.ejs') %>

@@ -1,0 +1,16 @@
+<%- include("header.ejs") %>
+<div class="posts">
+ <h1><%=post.title%></h1>
+<p><%=post.content%></p>
+<h2><%= post.blogger %></h2>
+<h4><%= post.period %></h4>
+<a href="/post/<%= post.id %>/edit">Edit</a>
+<form method="POST" action="/post/<%= post.id %>?_method=DELETE" style="display:inline;">
+    <button type="submit">Delete</button>
+</form> 
+</div>
+
+
+<a href="/">Back to Home</a>
+
+<%- include("footer.ejs") %>
